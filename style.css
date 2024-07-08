@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+    .game-card {
+      width: 100%; /* Adjust card width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Styles for mobile devices */
+    .game-card {
+      width: 90%; /* Adjust card width for smaller screens */
+    }
+  }
+  
 body {
     font-family: 'Cabin';
     background-color: #758190;
@@ -21,6 +35,13 @@ body {
 
 .stats-container {
     display: flex;
+    align-items:space-evenly;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    align-items:space-evenly;
+    box-shadow:0 0 30px lightblue;
 }
 
 .stats-card {
@@ -73,3 +94,4 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
