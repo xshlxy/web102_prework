@@ -83,15 +83,22 @@ body {
     box-shadow: 0 0 30px lightblue;
 }
 
-#button-container {
+#button-container, .controls {
     text-align: center;
+    margin: 20px 0;
+
 }
 
-button {
-    font-family: 'Cabin';
+button, input[type="text"] {
+    font-family: 'Cabin', sans-serif;
     border: none;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    cursor: pointer;
 }
 
+input[type="text"] {
+    width: 200px;
+    padding: 0.5%;
+}

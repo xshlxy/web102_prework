@@ -9,7 +9,7 @@
   <body>
     <!-- header row with logo -->
     <div class="header">
-        <img id="tentacles" src="assets/tentacles.png">
+        <img id="tentacles" src="assets/tentacles.png" alt="Sea Monster Logo">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
     </div>
 
@@ -47,12 +47,19 @@
         </div>
     </div>
 
+     <!-- search and sort controls -->
+     <div class="controls">
+        <input type="text" id="search-input" placeholder="Search games..." aria-label="Search games">
+        <button id="sort-by-pledged-btn" aria-label="Sort by pledged amount">Sort by Pledged Amount</button>
+        <button id="sort-by-backers-btn" aria-label="Sort by backers">Sort by Backers</button>
+    </div>
+
     <!-- list of games funded by Sea Monster -->
     <h2>Our Games</h2>
     <p>Check out each of our games below!</p>
     <div id="button-container">
-        <button id="unfunded-btn" aria-label="Filter Unfunded Games" onclick="filterUnfundedOnly()">Show Unfunded Only</button>
-        <button id="funded-btn" aria-label="Filter Funded Games" onclick="filterFundedOnly()">Show Funded Only</button>
+        <button id="unfunded-btn" aria-label="Show unfunded games only" onclick="filterUnfundedOnly()">Show Unfunded Only</button>
+        <button id="funded-btn" aria-label="Show funded games only" onclick="filterFundedOnly()">Show Funded Only</button>
         <button id="all-btn" aria-label="Show All Games" onclick="showAllGames()">Show All Games</button>
     </div>
     <div id="games-container">

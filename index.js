@@ -53,6 +53,33 @@ function addGamesToPage(games) {
 // later, we'll call this function using a different list of games
 addGamesToPage(GAMES_JSON);
 
+// Search function
+function filterGamesBySearch() {
+    const searchValue = document.getElementById('search-input').value.toLowerCase();
+    const filteredGames = GAMES_JSON.filter(game => {
+        return game.name.toLowerCase().split(' ').some(word => word.startsWith(searchValue));
+    });
+    deleteChildElements(gamesContainer); // Clear current game cards
+    addGamesToPage(filteredGames); // Display filtered games
+}
+
+// Sorting functions
+function sortGamesByPledged() {
+    const sortedGames = GAMES_JSON.slice().sort((a, b) => b.pledged - a.pledged);
+    deleteChildElements(gamesContainer);
+    addGamesToPage(sortedGames);
+}
+
+function sortGamesByBackers() {
+    const sortedGames = GAMES_JSON.slice().sort((a, b) => b.backers - a.backers);
+    deleteChildElements(gamesContainer);
+    addGamesToPage(sortedGames);
+}
+
+// Event listeners for search input and sorting buttons
+document.getElementById('search-input').addEventListener('input', filterGamesBySearch);
+document.getElementById('sort-by-pledged-btn').addEventListener('click', sortGamesByPledged);
+document.getElementById('sort-by-backers-btn').addEventListener('click', sortGamesByBackers);
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
  * total number of contributions, amount donated, and number of games on the site.
