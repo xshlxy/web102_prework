@@ -1,10 +1,10 @@
-# WEB102 Prework - _Name of App Here_
+# WEB102 Prework - _Sea_Monster_Fund_Games_
 
 Submitted by: Ashley Oliveira
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Fund Games** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
@@ -17,17 +17,20 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [ ] Search by name.
+- [ ] Sort by pledged constributions.
+- [ ] Sort by backers.
+- [ ] Increases accessibility.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='assets/sea-monster-fund-games.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with LiceCap
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -36,11 +39,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I completed all the requirements and added search functionality which makes the user experience better.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2024 Ashley Oliveira and CodePath
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
