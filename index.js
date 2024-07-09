@@ -42,6 +42,7 @@ function addGamesToPage(games) {
         <h3>${games[i].name}</h3> 
         <p>${games[i].description}</p>
         <p> Backers: ${games[i].backers}</p>
+        <p> Pledged: $${games[i].pledged.toLocaleString()}</p>
         `;
         // append the game to the games-container
         document.getElementById('games-container').appendChild(div);
@@ -51,7 +52,7 @@ function addGamesToPage(games) {
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
-addGamesToPage(GAMES_JSON);
+//addGamesToPage(GAMES_JSON);
 
 // Search function
 function filterGamesBySearch() {
@@ -104,7 +105,7 @@ const totalAmount = GAMES_JSON.reduce((total, games) => {
     return total + games.pledged;
 }, 0);
 // set inner HTML using template literal
-raisedCard.innerHTML = `<p>${totalAmount.toLocaleString()}`;
+raisedCard.innerHTML = `<p>$${totalAmount.toLocaleString()}`;
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
@@ -153,6 +154,9 @@ const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
+document.addEventListener("DOMContentLoaded", () => {
+    filterFundedOnly();
+});
 unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
 allBtn.addEventListener("click", showAllGames);
